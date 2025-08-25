@@ -54,8 +54,10 @@ class TextWidget extends StatelessWidget {
                      decorationThickness: 1,
                      debugLabel: 'Hello',
                      fontFamily: '',
-                     overflow: TextOverflow.visibl
+                     overflow: TextOverflow.visible
                    ),
+                   textDirection: TextDirection.rtl,
+
               ),
             ),
           ],
