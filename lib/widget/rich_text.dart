@@ -7,20 +7,24 @@ class RichTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
        body: SafeArea(
-         child: Column(
-           children: [
-             RichText(
-                 text: TextSpan(
-                   style: DefaultTextStyle.of(context).style,
-                   children: <TextSpan>[
-                     TextSpan(text: 'Hello'),
-                     TextSpan(text: 'World'),
-                     TextSpan(text: 'Programmer', style: TextStyle(fontWeight: FontWeight.bold)),
-         
-                   ]
-                 )
-             )
-           ],
+         child: Center(
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               RichText(
+                   text: TextSpan(
+                     text: 'First',
+                     style: TextStyle(fontSize: 20, color: Colors.green),
+                     children: <TextSpan>[
+                       TextSpan(text: 'Second', style: TextStyle(fontSize: 40, color: Colors.black)),
+                       TextSpan(text: 'Third', style: TextStyle(fontSize: 30, color: Colors.blue)),
+                       TextSpan(text: 'Default',),
+
+                     ]
+                   )
+               )
+             ],
+           ),
          ),
        ),
     );
