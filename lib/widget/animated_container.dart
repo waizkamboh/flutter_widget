@@ -14,6 +14,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
 
   double height = 100;
   double width = 100;
+  Color color = Colors.green;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
           height: height,
             width: width,
             decoration: BoxDecoration(
-              color: Colors.red
+              color: color,
             ),
             duration: Duration(milliseconds: 500),
           curve: Curves.fastLinearToSlowEaseIn,
@@ -35,6 +36,12 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
             final random = Random();
             height =  random.nextInt(300).toDouble();
             width = random.nextInt(300).toDouble();
+            color = Color.fromRGBO(
+              random.nextInt(256),
+              random.nextInt(256),
+              random.nextInt(256),
+              1
+            );
             setState(() {
 
             });
