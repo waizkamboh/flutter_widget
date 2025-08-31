@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/reorderable_list_view.dart';
+import 'package:flutter_widget/widget/animated_container.dart';
 import 'package:flutter_widget/widget/bottom_navigation_bar.dart';
 import 'package:flutter_widget/widget/drawer.dart';
 import 'package:flutter_widget/widget/icon.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LayoutBuilderWidget(),
+      home: AnimatedContainerWidget(),
     );
   }
 }
