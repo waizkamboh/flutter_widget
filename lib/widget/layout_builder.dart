@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+class LayoutBuilderWidget extends StatefulWidget {
+  const LayoutBuilderWidget({super.key});
+
+  @override
+  State<LayoutBuilderWidget> createState() => _LayoutBuilderWidgetState();
+}
+
+class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: Container(
+         height: size.height * 0.5,
+         width: size.width,
+        color: Colors.red,
+        alignment: Alignment.center,
+        child: LayoutBuilder(
+          builder: (context, constraints){
+            return Container(
+              height: constraints.maxHeight * 0.5,
+              width: constraints.maxWidth * 0.5,
+              alignment: Alignment.center,
+              color: Colors.green,
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
