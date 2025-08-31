@@ -34,6 +34,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
             ),
             duration: Duration(milliseconds: 500),
           curve: Curves.fastLinearToSlowEaseIn,
+          child: FittedBox(child: Text('Flutter', style: TextStyle(fontSize: 300),)),
 
         ),
       ),
