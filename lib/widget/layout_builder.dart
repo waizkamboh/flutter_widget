@@ -13,20 +13,31 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: Container(
-         height: size.height * 0.5,
-         width: size.width,
-        color: Colors.red,
-        alignment: Alignment.center,
+      //Parents constraints to calculate the child constraints
+      // body: Container(
+      //    height: size.height * 0.5,
+      //    width: size.width,
+      //   color: Colors.red,
+      //   alignment: Alignment.center,
+      //   child: LayoutBuilder(
+      //     builder: (context, constraints){
+      //       return Container(
+      //         height: constraints.maxHeight * 0.5,
+      //         width: constraints.maxWidth * 0.5,
+      //         alignment: Alignment.center,
+      //         color: Colors.green,
+      //       );
+      //     },
+      //   ),
+      // ),
+      body: Center(
         child: LayoutBuilder(
-          builder: (context, constraints){
-            return Container(
-              height: constraints.maxHeight * 0.5,
-              width: constraints.maxWidth * 0.5,
-              alignment: Alignment.center,
-              color: Colors.green,
-            );
-          },
+            builder: (context, constraints){
+              if(constraints.maxWidth > 600){
+                return Text('This is web!');
+              }
+              return Text('This is mobile!');
+            }
         ),
       ),
     );
