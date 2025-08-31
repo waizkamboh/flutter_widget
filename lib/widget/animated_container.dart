@@ -16,6 +16,8 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   double width = 100;
   Color color = Colors.green;
 
+  BorderRadiusGeometry borderRadius = BorderRadius.circular(300);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +27,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
             width: width,
             decoration: BoxDecoration(
               color: color,
+              borderRadius: borderRadius
             ),
             duration: Duration(milliseconds: 500),
           curve: Curves.fastLinearToSlowEaseIn,
@@ -42,6 +45,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
               random.nextInt(256),
               1
             );
+            borderRadius = BorderRadius.circular(random.nextInt(100).toDouble());
             setState(() {
 
             });
