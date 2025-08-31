@@ -5,6 +5,7 @@ import 'package:flutter_widget/widget/bottom_navigation_bar.dart';
 import 'package:flutter_widget/widget/drawer.dart';
 import 'package:flutter_widget/widget/icon.dart';
 import 'package:flutter_widget/widget/layout_builder.dart';
+import 'package:flutter_widget/widget/list_view.dart';
 import 'package:flutter_widget/widget/rich_text.dart';
 import 'package:flutter_widget/widget/sliver_app_bar.dart';
 import 'package:flutter_widget/widget/tab_bar.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AnimatedContainerWidget(),
+      home: ListViewWidget(),
     );
   }
 }
