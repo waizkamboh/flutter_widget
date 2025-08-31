@@ -30,6 +30,7 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
       //     },
       //   ),
       // ),
+      //Different ui for different screen size
       body: Center(
         child: LayoutBuilder(
             builder: (context, constraints){
