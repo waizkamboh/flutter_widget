@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/model/user.dart';
 
@@ -45,34 +46,28 @@ class _ReOrderAbleListViewWidgetState extends State<ReOrderAbleListViewWidget> {
           return Column(
             key: ValueKey(user),
             children: [
-              ReorderableDragStartListener(
-                index: index,
-                child: ListTile(
-                  leading: CircleAvatar(
-                    radius: 25,
-                    backgroundImage: NetworkImage(user.image),
-                  ),
-                  title: Text(
-                    user.name,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black87),
-                  ),
-                  subtitle: Text(
-                    user.lastMessage ?? "Hey there! I am using WhatsApp",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: Colors.grey),
-                  ),
-                  trailing: Text(
-                    user.lastMessageTime ?? "12:00 PM",
-                    style: const TextStyle(color: Colors.grey, fontSize: 12),
-                  ),
-
+              ListTile(
+                leading: CircleAvatar(
+                  radius: 25,
+                  backgroundImage: CachedNetworkImageProvider(user.image),
                 ),
+                title: Text(
+                  user.name,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black87),
+                ),
+                subtitle: Text(
+                  user.lastMessage ?? "Hey there! I am using WhatsApp",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(color: Colors.grey),
+                ),
+
+
               ),
               const Divider(
                 height: 0,
-                indent: 80, // align divider with avatar
+                indent: 80, 
               ),
             ],
           );
