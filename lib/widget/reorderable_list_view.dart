@@ -13,10 +13,10 @@ class _ReOrderAbleListViewWidgetState extends State<ReOrderAbleListViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // WhatsApp background
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFF075E54), // WhatsApp green
+        backgroundColor: const Color(0xFF075E54),
         title: const Text(
           "WhatsApp",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -47,10 +47,25 @@ class _ReOrderAbleListViewWidgetState extends State<ReOrderAbleListViewWidget> {
             key: ValueKey(user),
             children: [
               ListTile(
+                // leading: CircleAvatar(
+                //   radius: 25,
+                //   backgroundImage: NetworkImage(user.image),
+                // ),
                 leading: CircleAvatar(
                   radius: 25,
-                  backgroundImage: CachedNetworkImageProvider(user.image),
+                  backgroundImage: null,
+                  child: CachedNetworkImage(
+                    imageUrl: user.image,
+                    imageBuilder: (context, imageProvider) => CircleAvatar(
+                      radius: 25,
+                      backgroundImage: imageProvider,
+                    ),
+                    placeholder: (context, url) =>
+                    const CircularProgressIndicator(strokeWidth: 2),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                  ),
                 ),
+
                 title: Text(
                   user.name,
                   style: const TextStyle(
