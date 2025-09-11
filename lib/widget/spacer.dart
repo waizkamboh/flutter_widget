@@ -24,7 +24,7 @@ class _SpacerWidgetState extends State<SpacerWidget> {
             width: 60,
             color: Colors.blueAccent,
           ),
-          Spacer(),
+          Spacer(flex: 3,),
           Container(
             height: 60,
             width: 60,
