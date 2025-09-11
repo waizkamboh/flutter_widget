@@ -14,7 +14,8 @@ class _GridViewWidgetState extends State<GridViewWidget> {
       appBar: AppBar(),
       body: Center(
         child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          scrollDirection: Axis.horizontal,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, crossAxisSpacing: 10, mainAxisSpacing: 10),
           children: [
            Image.network('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80'),
            Image.network('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80'),
