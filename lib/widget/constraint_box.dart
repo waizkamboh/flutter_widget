@@ -10,6 +10,22 @@ class ConstraintBoxWidget extends StatefulWidget {
 class _ConstraintBoxWidgetState extends State<ConstraintBoxWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text('Constraint Box')),
+      body: ConstrainedBox(
+        constraints: BoxConstraints(
+          minHeight: 100,
+          minWidth: 200,
+          maxWidth: 200,
+          maxHeight: 400,
+        ),
+        child: Text(
+          'Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World!',
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
   }
 }

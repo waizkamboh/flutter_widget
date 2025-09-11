@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/widget/constraint_box.dart';
 import 'package:flutter_widget/widget/gridview/grid_view.dart';
 import 'package:flutter_widget/widget/list_view_builder.dart';
 import 'package:flutter_widget/widget/list_view_seperator.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: GridViewWidget(),
+      home: ConstraintBoxWidget(),
     );
   }
 }
