@@ -11,8 +11,7 @@ class _ElevatedButtonWidgetState extends State<FilledButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisSize: MainAxisSize.min,
+      body: ListView(
         children: [
           FilledButton(
               onPressed: null,
@@ -63,6 +62,24 @@ class _ElevatedButtonWidgetState extends State<FilledButtonWidget> {
             label: Text('Enabled'),
             icon: Icon(Icons.message),
           ),
+          SizedBox(height: 30,),
+
+          TextButton(
+              onPressed: null,
+              child: Text('Disabled')
+          ),
+          SizedBox(height: 30,),
+          TextButton(
+              onPressed: (){},
+              child: Text('Enabled')
+          ),
+          SizedBox(height: 30,),
+          TextButton.icon(
+            onPressed: () {},
+            label: Text('Enabled'),
+            icon: Icon(Icons.message),
+          ),
+
 
         ],
       ),
