@@ -5,6 +5,7 @@ import 'package:flutter_widget/widget/gridview/grid_view.dart';
 import 'package:flutter_widget/widget/input_and_interactive/all_type_of_button.dart';
 import 'package:flutter_widget/widget/input_and_interactive/check_box.dart';
 import 'package:flutter_widget/widget/input_and_interactive/gesture_detector_widget.dart';
+import 'package:flutter_widget/widget/input_and_interactive/radio_button.dart';
 import 'package:flutter_widget/widget/listview/list_view_builder.dart';
 import 'package:flutter_widget/widget/listview/list_view_seperator.dart';
 import 'package:flutter_widget/widget/otherwidget/media_query.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: CheckBoxWidget(),
+      home: RadioButtonWidget(),
     );
   }
 }
