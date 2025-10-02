@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget/widget/aspect_ratio.dart';
 import 'package:flutter_widget/widget/constraint_box.dart';
 import 'package:flutter_widget/widget/gridview/grid_view.dart';
+import 'package:flutter_widget/widget/input_and_interactive/gesture_detector_widget.dart';
 import 'package:flutter_widget/widget/listview/list_view_builder.dart';
 import 'package:flutter_widget/widget/listview/list_view_seperator.dart';
+import 'package:flutter_widget/widget/otherwidget/media_query.dart';
 import 'package:flutter_widget/widget/reorderable_list_view.dart';
 import 'package:flutter_widget/widget/animated_container.dart';
 import 'package:flutter_widget/widget/bottom_navigation_bar.dart';
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SpacerWidget(),
+      home: GestureDetectorWidget(),
     );
   }
 }
