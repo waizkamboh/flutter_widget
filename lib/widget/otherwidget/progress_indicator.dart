@@ -24,8 +24,15 @@ class _ProgressIndicatorWidgetState extends State<ProgressIndicatorWidget> {
 
 
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 500,),
+            LinearProgressIndicator(
+              backgroundColor: Colors.greenAccent,
+              value: 5,
+              minHeight: 10,
+              stopIndicatorColor: Colors.grey,
 
+
+            )
           ],
         ),
       ),
