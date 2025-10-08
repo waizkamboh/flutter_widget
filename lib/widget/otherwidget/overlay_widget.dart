@@ -11,6 +11,7 @@ class _OverlayWidgetState extends State<OverlayWidget> {
 
   OverlayEntry? entry;
   Offset offset = Offset(20, 40);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,13 @@ class _OverlayWidgetState extends State<OverlayWidget> {
                 onPressed: showOverlay,
                 label: Text('Show Floating Widget'),
                 icon: Icon(Icons.visibility),
-            )
+            ),
+            SizedBox(height: 24,),
+            ElevatedButton.icon(
+              onPressed: hideOverlay,
+              label: Text('Hide Floating Widget'),
+              icon: Icon(Icons.visibility_off),
+            ),
           ],
         ),
       ),
@@ -51,5 +58,10 @@ class _OverlayWidgetState extends State<OverlayWidget> {
     final overlay = Overlay.of(context);
     overlay.insert(entry!);
 
+  }
+
+  void hideOverlay() {
+    entry?.remove();
+    entry = null;
   }
 }
