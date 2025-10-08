@@ -11,7 +11,19 @@ class _OverlayWidgetState extends State<OverlayWidget> {
 
   OverlayEntry? entry;
   Offset offset = Offset(20, 40);
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => showOverlay());
+  }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    hideOverlay();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
