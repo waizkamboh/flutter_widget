@@ -11,6 +11,7 @@ import 'package:flutter_widget/widget/input_and_interactive/switch_button.dart';
 import 'package:flutter_widget/widget/listview/list_view_builder.dart';
 import 'package:flutter_widget/widget/listview/list_view_seperator.dart';
 import 'package:flutter_widget/widget/otherwidget/alert_dialog.dart';
+import 'package:flutter_widget/widget/otherwidget/animated_builder.dart';
 import 'package:flutter_widget/widget/otherwidget/dialog.dart';
 import 'package:flutter_widget/widget/otherwidget/media_query.dart';
 import 'package:flutter_widget/widget/otherwidget/overlay_widget.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ProgressIndicatorWidget(),
+      home: AnimatedBuilderWidget(),
     );
   }
 }
