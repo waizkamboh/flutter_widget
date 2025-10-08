@@ -13,6 +13,7 @@ import 'package:flutter_widget/widget/listview/list_view_seperator.dart';
 import 'package:flutter_widget/widget/otherwidget/alert_dialog.dart';
 import 'package:flutter_widget/widget/otherwidget/animated_builder.dart';
 import 'package:flutter_widget/widget/otherwidget/dialog.dart';
+import 'package:flutter_widget/widget/otherwidget/hero.dart';
 import 'package:flutter_widget/widget/otherwidget/media_query.dart';
 import 'package:flutter_widget/widget/otherwidget/overlay_widget.dart';
 import 'package:flutter_widget/widget/otherwidget/progress_indicator.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AnimatedBuilderWidget(),
+      home: HeroWidget(),
     );
   }
 }
